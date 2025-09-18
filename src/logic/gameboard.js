@@ -74,3 +74,4 @@ export class Gameboard {
       return this.ships.every((ship) => ship.sunk == true)
     }
 }
+
