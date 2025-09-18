@@ -10,6 +10,6 @@ describe("Test gameboard methods", () => {
         newBoard.receiveAttack(3, 6)
         newBoard.receiveAttack(3, 5)
         newBoard.receiveAttack(3, 4)
-        expect(newBoard.getBoard()[3][6]).toBe(3)
+        expect(newBoard.allSunk()).toBe(true)
     })
 })
