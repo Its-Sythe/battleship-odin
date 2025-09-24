@@ -4,12 +4,17 @@ import { Ship } from './ship.js'
 
 export class Game {
     init() {
-        this.p1 = new Player()
-        this.p2 = new Player()
+        this.placeShips()
     } 
+
+    placeShips() {
+        this.placeP1Ships()
+        this.placeP2Ships()
+    }
     
     placeP1Ships() {
-        const p1 = this.p1.board();
+        let player = new Player()
+        const p1 = player.board();
         const ships = [
             new Ship("TT", 2), new Ship("O_O", 3),
             new Ship(":)", 5), new Ship(";)", 1)
@@ -23,7 +28,8 @@ export class Game {
     }
 
     placeP2Ships() {
-        const p2 = this.p2.board();
+        let player = new Player()
+        const p2 = player.board();
         const ships = [
             new Ship("-_-", 3), new Ship("O_o", 2),
             new Ship("^_^", 1), new Ship("'_'", 5)
@@ -34,5 +40,5 @@ export class Game {
         p1.placeShip(ships[3], [3, 2], "h")
 
         return p2.getBoard();
-    }
+    }   
 }
