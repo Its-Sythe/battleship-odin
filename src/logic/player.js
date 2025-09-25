@@ -1,12 +1,11 @@
-import { Gameboard } from "./gameboard.js"
+import { Gameboard } from "./gameboard.js";
 
 export class Player {
-    constructor() {
-        this.gameboard = new Gameboard();
-    }
+  constructor() {
+    this.gameboard = new Gameboard();
+  }
 
-    board() {
-        return this.gameboard;
-    }
+  board() {
+    return this.gameboard;
+  }
 }
-
